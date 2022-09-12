@@ -1,0 +1,79 @@
+body{
+    height: 1000vh;
+    background: linear-gradient(to bottom,#609fe7 0%,#576e71 30%,#e1c45e 70%,#b26339 100%);
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    position: fixed;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1000%;
+    align-items: center;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18pt;
+    color: black;
+    padding: 5px;
+    background-color: thistle;
+}
+
+.bus{
+    position: fixed;
+    width: 15%;
+    bottom: 5px;
+}
+
+.timeline{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin-left: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+}
+
+.pic{
+    bottom: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.over{
+    bottom: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bus_stop{
+    width: 15%;
+    bottom: 0%;
+}
+
+.button{
+    position: fixed;
+    right: 5%;
+    background-color: antiquewhite;
+    width: 10%;
+    height: 8%;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.word{
+    opacity: 0;
+    margin-bottom: 0;
+}
+
