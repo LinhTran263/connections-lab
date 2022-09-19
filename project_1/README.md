@@ -8,9 +8,7 @@ The user interaction I am intending to include is for the users to input the zod
 <h2> First attempt </h2>
 <p>I created an initial version of the website. In the website, I currently only included the input box which allow me extract the desired data from the API. The information can be seen in the console since I want to try the p5.js first to observe how things would organize.</p>
 
-Working link of the website:
-
-Wireframe:
+Wireframe: https://linhtran263.github.io/connections-lab/project_1/
 
 <img src="wireframe.png" alt="Alt text" title="Optional title">
 
