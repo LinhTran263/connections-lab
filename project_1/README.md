@@ -10,4 +10,7 @@ The user interaction I am intending to include is for the users to input the zod
 
 Working link of the website: https://linhtran263.github.io/connections-lab/project_1/
 
-Wireframe: <img src="wireframe.png>
+Wireframe:
+
+<img src="wireframe.png" alt="Alt text" title="Optional title">
+
