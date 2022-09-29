@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <div class="scene" id = "scene1">
+        <div class="moon" id="moon1"></div>
+        <img src = "images/virgo.png" class="virgo" id="virgo">
+        <img src = "images/aries.png" class="virgo" id="aries">
+        <img src = "images/gemini.png" class="virgo" id="gemini">
+        <img src = "images/aquarius.png" class="virgo" id="aquarius">
+        <img src = "images/sagittarius.png" class="virgo" id="sagittarius">
+        <img src = "images/capricorn.png" class="virgo" id="capricorn">
+        <img src = "images/libra.png" class="virgo" id="libra">
+        <img src = "images/scorpio.png" class="virgo" id="scorpio">
+        <img src = "images/taurus.png" class="virgo" id="taurus">
+        <img src = "images/pisces.png" class="virgo" id="pisces">
+        <img src = "images/leo.png" class="virgo" id="leo">
+        <img src = "images/cancer.png" class="virgo" id="cancer">
+
+    </div>
+
+    <div class="input_box">
+        <button class="enter" id="enter">Enter</button>
+
+        <div class="dropdown">
+            <label for="zodiac-select">Choose a zodiac:</label>
+
+            <select name="pets" id="zodiac-select">
+                <option value="">--Please choose a zodiac--</option>
+                <option value="aries">Aries</option>
+                <option value="taurus">Taurus</option>
+                <option value="gemini">Gemini</option>
+                <option value="cancer">Cancer</option>
+                <option value="leo">Leo</option>
+                <option value="virgo">Virgo</option>
+                <option value="libra">Libra</option>
+                <option value="scorpio">Scorpio</option>
+                <option value="sagittarius">Sagittarius</option>
+                <option value="capricorn">Capricorn</option>
+                <option value="aquarius">Aquarius</option>
+                <option value="pisces">Pisces</option>
+            </select>
+
+            <label for="day-select">Choose a day:</label>
+
+            <select name="zodiac" id="day-select">
+                <option value="">--Please choose a day--</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="today">Today</option>
+                <option value="tomorrow">Tomorrow</option>
+            </select>
+
+        </div>
+    </div>
+
+    <div class="text" id="text-info">
+        <p class="info" id="pdescription" style="font-size: 16pt;"></p>
+        <p class="info" id="pcurrent_date"></p>
+        <p class="info" id="pdate_range"></p>
+        <p class="info" id="pcompatibility"></p>
+        <p class="info" id="pcolor"></p>
+        <p class="info" id="plucky_number"></p>
+        <p class="info" id="plucky_time"></p>
+        <p class="info" id="pmood"></p>
+    </div>
+
+    
+</body>
+</html>
