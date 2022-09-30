@@ -32,4 +32,23 @@ The user interaction I am intending to include is for the users to input the zod
  <img src="fifth.png">
  
 <p><b>Fifth Idea:</b> I initially drew the moon with CSS, it just simply a div with rounded corners. However, since I need to include the p5.js elements in my website, I decided to draw the moon by p5.js.
-<p><b>Fifth Solution:</b> I made different simple of cicles that will change based on the input of time "yesterday", "today", and "tomorrow". This is with the aim to display that the time of choice has been different, the moon will change accordingly. I set the full moon to be "today" and the half moons of opposite sides to be "yesterday" and "tomorrow".
+<p><b>Fifth Solution:</b> I made different simple of cicles that will change based on the input of time "yesterday", "today", and "tomorrow". This is with the aim to display that the time of choice has been different, the moon will change accordingly. I set the full moon to be "today" and the half moons of opposite sides to be "yesterday" and "tomorrow".</p>
+
+<img src="sixth1.png">
+<img src="sixth2.png">
+<img src="sixth3.png">
+
+<h2> Failure and Lessons </h2>
+<p>Initially, I failed to implement my ideas into the website. I have to change ideas and designs continuously and adapt to any changes and erros that would occur in the code. However, this will always result in I learning new things about html, CSS and JavaScript.</p>
+<p>One of my major failure while doing the website is the overlay problem of the constellations. I am unable to fix it before the day of presentation. Nevertheless, (even though still not know why my initial code was wrong), the code worked in the end of this project.</p>
+<p>I am unable to create a sophisticate design by using p5.js. Even though I tried to make different designs that will involve the use of p5.js. None of my work resulted in the way that I expected. However, while I was trying to figuring out how to make p5.js works, I learnt how the basic of p5.js and be able to draw it in simple scale.</p>
+<p>A minor problem on the website is that the information box will be out of the screen which I cannot fix although I tried to set conditions for the postions. However, my temporary attemptwas that shrink the information box a bit to avoid it overflow.</p>
+
+<h2> Next Steps </h2>
+<ul>
+  <li>Try to figureout and fix the minor bugs and issues in the webite.</li>
+  <li>Implement more interactivity instead just hovering and input.</li>
+  <li>Create a website that would similar to games instead just only give information</li>
+  <li>Add a place to store data such as history of searches.</li>
+  <li>Add more p5.js and animation to make things look smoother instead of instant change</li>
+</ul>
