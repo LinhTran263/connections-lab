@@ -16,8 +16,20 @@ The user interaction I am intending to include is for the users to input the zod
 <img src="second.png">
 
 <p><b>Third Idea:</b> I used to use an input box for the users to input the zodiac that they want and the time that they want to see it. However, after the user testing day, I recieved comments that since it only has a limited amount of input, typing will make it inconvenient for the users. Also, using the input box with a limited amount of data will require me to have validation check for input.</p>
-<p><b>Third Solution:</b>I replaced the input boxes with a drop down lists. One will contain 12 zodiac signs that the user can pick and the other contains options of time, "yesterday", "today", and "tomorrow". The choices will be collected and extract data from the API after clicking the"Enter" button.
+<p><b>Third Solution:</b>I replaced the input boxes with a drop down lists. One will contain 12 zodiac signs that the user can pick and the other contains options of time, "yesterday", "today", and "tomorrow". The choices will be collected and extract data from the API after clicking the"Enter" button.</p>
   
 <img src="third1.png">
 <img src="third2.png">
 <img src="third3.png">
+  
+<p><b>Fourth Idea:</b> Similar to the first idea, I tried to make the data from the API appear on the p5.js canvas when hovering. However, it does not appear properly, my guess it that the continuous loop of drawing avoiding that.</p>
+<p><b>Fourth Solution:</b> I made a separate div in html and fed data in to it so that it can display the data whenever the user click enter. Also, for the convenience of the user, I made the page to scroll to the constellation positions. Furthermore, instead of making the information box always displays on the screen, I made them to disappear after the user click anywhere on the screen. This will allow users to look through the constellations and the whole page in general.
+  
+<img src="fourth.png">
+  
+ <p>Along with the presentation of data, I also stored the data at the location of the constellations. The user just needs to hover over the constellation to see the information. This will allow users to check the information again without have to re-enter the inputs.</p>
+ 
+ <img src="fifth.png">
+ 
+<p><b>Fifth Idea:</b> I initially drew the moon with CSS, it just simply a div with rounded corners. However, since I need to include the p5.js elements in my website, I decided to draw the moon by p5.js.
+<p><b>Fifth Solution:</b> 
