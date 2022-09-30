@@ -1,5 +1,6 @@
 # Connections Lab
 <h1> Zodiac signs </h1>
+Working link: https://linhtran263.github.io/connections-lab/project1/
 <h2> Initial Ideas </h2>
 <p>By using API from RapidAPI, I found an API about astrology. This will inclue information about different zodiac signs as well as quote of the day.
 The user interaction I am intending to include is for the users to input the zodiac sign of their choice and the screen will display the information. Besides the data of the zodiac signs, I am going to use p5.j to draw the shape of the stars and it will move accordingly as the zodiac signs change. 
