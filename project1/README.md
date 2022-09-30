@@ -52,3 +52,7 @@ The user interaction I am intending to include is for the users to input the zod
   <li>Add a place to store data such as history of searches.</li>
   <li>Add more p5.js and animation to make things look smoother instead of instant change</li>
 </ul>
+
+<h2> A comparison of my first thoughts and my final prototype </h2>
+<img src="wireframe.png">
+<img src="fullpage.png">
