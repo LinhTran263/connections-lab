@@ -23,7 +23,7 @@ The user interaction I am intending to include is for the users to input the zod
 <img src="third3.png">
   
 <p><b>Fourth Idea:</b> Similar to the first idea, I tried to make the data from the API appear on the p5.js canvas when hovering. However, it does not appear properly, my guess it that the continuous loop of drawing avoiding that.</p>
-<p><b>Fourth Solution:</b> I made a separate div in html and fed data in to it so that it can display the data whenever the user click enter. Also, for the convenience of the user, I made the page to scroll to the constellation positions. Furthermore, instead of making the information box always displays on the screen, I made them to disappear after the user click anywhere on the screen. This will allow users to look through the constellations and the whole page in general.
+<p><b>Fourth Solution:</b> I made a separate div in html and fed data in to it so that it can display the data whenever the user click enter. Also, for the convenience of the user, I made the page to scroll to the constellation positions. Furthermore, instead of making the information box always displays on the screen, I made them to disappear after the user click anywhere on the screen. This will allow users to look through the constellations and the whole page in general.</p>
   
 <img src="fourth.png">
   
@@ -32,4 +32,4 @@ The user interaction I am intending to include is for the users to input the zod
  <img src="fifth.png">
  
 <p><b>Fifth Idea:</b> I initially drew the moon with CSS, it just simply a div with rounded corners. However, since I need to include the p5.js elements in my website, I decided to draw the moon by p5.js.
-<p><b>Fifth Solution:</b> 
+<p><b>Fifth Solution:</b> I made different simple of cicles that will change based on the input of time "yesterday", "today", and "tomorrow". This is with the aim to display that the time of choice has been different, the moon will change accordingly. I set the full moon to be "today" and the half moons of opposite sides to be "yesterday" and "tomorrow".
