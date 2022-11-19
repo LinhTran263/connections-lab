@@ -1,5 +1,6 @@
 # Dragon Hunt
 Game link: https://peat-grove-fukuiraptor.glitch.me/
+
 Code link: https://glitch.com/edit/#!/peat-grove-fukuiraptor (we have not deleted the commented codes since we still want to debug more)
 
 ## Inspiration
