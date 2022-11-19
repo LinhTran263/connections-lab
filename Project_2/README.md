@@ -152,3 +152,13 @@ However, this was resolved by acknowledging the different bewteen them and using
 Another problem that we are having is that the characters are glitching whenever there are 2 players moving at the same time. We cannot debug successfully to know why that is the case.
 
 The last challenge is that when we setted the conditions for when the game stops. However, it was not so successful whenever we set the condition, the code reacts weirdly. 
+
+## The game itself
+Below is the layout of the game:
+<img src="game.png">
+
+We also created the html pages for winnng and losing but due to some issues wth the codes, we could not make the page changes with the conditions are met.
+<img src="gamewin.png">
+<img src="gamelose.png">
+
+
