@@ -155,10 +155,18 @@ The last challenge is that when we setted the conditions for when the game stops
 
 ## The game itself
 Below is the layout of the game:
-<img src="game.png">
+<img src="game.PNG">
 
 We also created the html pages for winnng and losing but due to some issues wth the codes, we could not make the page changes with the conditions are met.
-<img src="gamewin.png">
-<img src="gamelose.png">
+<img src="gamewin.PNG">
+<img src="gamelose.PNG">
 
+## Next steps
+Our next steps will be trying to fix the existing bugs about the character movements and winning/losing conditions. Also, we have a lot a ideas that can be applied to this game in the future such as being able to have bonuses and set the bomb timers. Also, if it is poissble, we want this game to have more players at the same time not just 2. Furthermore, we want it to be more eralistic and aesthetic in terms of maps and characters.
 
+## Individual works
+###Together
+We did a lot of things together. We made the character controllers emission of charater data at first. However, since it was not the correct way to do it, we have to rewrite the codes. Then we tried to debug in our own time and together whenever we can meet.
+
+### Linh
+I did the html pages as well as asking for opinions from Yahia to have agreements on the design. Also, I tried to do emission of data for bullets and characters at first but it was not too successful. I developed to scoring system for the game and display it by emitting the score information to the server and emit it back the client side. THere is a small issue with the display of score since the score kind of updating occassionally. It seems that some conditions were se wrong but I have no idea where although I spent a lot of time to debug it. 
