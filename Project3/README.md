@@ -44,7 +44,7 @@ For the design of the page, I used the tag ```marquee``` to have a cloud-like sh
     </div> 
 ```
 ####Illustration
-<img src="welcome.png">
+<img src="welcome.PNG">
 
 ### The building page
 This page is using the cooperation of the database and 
