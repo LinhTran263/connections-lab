@@ -167,3 +167,5 @@ Finally, the preview is coded by using p5.js. Everytime the users changing color
     })
 
 ```
+#### Illustration
+<img src="build.PNG">
