@@ -98,3 +98,72 @@ The section below is used to display input boxes.
             </div>
         </section>
 ```
+Then, I connect with the database and pass all of the users' into a JSON so that I can push it into the database in the server side.
+```
+        let houseObj = {
+            "name": name_input,
+            "type": building_type,
+            "baseColor": house_color,
+            "roofColor": roof_color,
+            "msg": msg_input,
+            "msgColor": messColor
+        };
+
+        let houseObjJSON = JSON.stringify(houseObj);
+        console.log(houseObjJSON);
+
+
+        fetch('/houses',{
+            method: 'POST',
+            headers: {'Content-Type' : 'application/json'},
+            body: houseObjJSON
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+```
+On the server side, along with pushing the data into the database, I also created a random position that the new houses can spawn everytime a new user joins. I made a 2D array that initially contains all 0s. Then, everytime a house is inputed, the position in the array will be generated randomly without collisions. When this happens, the value of that position will be updated to 1. The position data is also pushed into the database.
+```
+app.post("/houses", (req,res) => {
+    let randW = Math.floor(Math.random() * 7);
+    let randH = Math.floor(Math.random() * 7);
+    do{
+        randW = Math.floor(Math.random() * 7);
+        randH = Math.floor(Math.random() * 7);
+        if (housePos[randW][randH] == 0) break;
+        console.log(randW,randH);
+    }
+    while(housePos[randW][randH] != 0);
+    housePos[randW][randH] = 1;
+    let obj = {
+        house: req.body,
+        posX: randW,
+        posY: randH
+    }
+    db.push("userHouses", obj);
+    db.get("userHouses").then(houseData =>{
+        console.log(houseData);
+    })
+})
+```
+
+Finally, the preview is coded by using p5.js. Everytime the users changing colors, they can see what a preview of the colors they have chose on a white background.
+```
+//collecting input of colors
+    let inputColor = document.getElementById("color-base");
+    inputColor.addEventListener("change", ()=>{
+        house_color = document.getElementById("color-base").value;
+    })
+
+    let roofColor = document.getElementById("color-roof");
+    roofColor.addEventListener("change", ()=>{
+        roof_color = document.getElementById("color-roof").value;
+    })
+
+    let msgColor = document.getElementById("colormsg");
+    msgColor.addEventListener("change", ()=>{
+        messColor = document.getElementById("colormsg").value;
+    })
+
+```
