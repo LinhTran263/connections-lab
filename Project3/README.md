@@ -309,3 +309,13 @@ In addition to that, to make the user experience easier, I made the rotation ani
 
 #### Illustration
 <img src="town.PNG">
+
+## Challenges
+* The pivots and scalling of the houses causing a lot of troubles because they are different for each model. Therefore, it is time consuming to adjust the positions of every object in AFrame. I am yet find out any more efficient way to do this.
+* The database sometimes load before the p5.js causing error to the preview scene.
+
+## Next steps
+My next steps will be:
+* Implemeting the mailing system instead of having the messages appear on the tp.
+* Having an account so that people can continue with their house and changing the message without creating a new house.
+* Create a map with roads so that it can be more town-like rather than just houses.
