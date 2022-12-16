@@ -315,7 +315,7 @@ In addition to that, to make the user experience easier, I made the rotation ani
 * The database sometimes load before the p5.js causing error to the preview scene.
 
 ## Overall lessons
-Learning AFrame is such an interting experience and I really want to apply it for VR since they have a mode for that. Aside from that, I just realized how important the relationship of child-parent in html. It was not too clear previously since I can adjust things without make things inside another thing. However, this time, it is a huge advantage because everything models have different pivots. If they do not have this, I will need to calculate the positions differently.
+Learning AFrame is such an interesting experience and I really want to apply it for VR since they have a mode for that. Aside from that, I just realized how important the relationship of child-parent in html. It was not too clear previously since I can adjust things without make things inside another thing. However, this time, it is a huge advantage because everything models have different pivots. If they do not have this, I will need to calculate the positions differently.
 
 ## Next steps
 My next steps will be:
