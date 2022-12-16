@@ -311,8 +311,11 @@ In addition to that, to make the user experience easier, I made the rotation ani
 <img src="town.PNG">
 
 ## Challenges
-* The pivots and scalling of the houses causing a lot of troubles because they are different for each model. Therefore, it is time consuming to adjust the positions of every object in AFrame. I am yet find out any more efficient way to do this.
+* The pivots and scalling of the houses causing a lot of troubles because they are different for each model. Therefore, it is time consuming to adjust the positions of every object in AFrame. My temporary solution to this is making every relating object be the models' children. By this, I just need to adjust the for every model once and run the for loop for every other models. 
 * The database sometimes load before the p5.js causing error to the preview scene.
+
+## Overall lessons
+Learning AFrame is such an interting experience and I really want to apply it for VR since they have a mode for that. Aside from that, I just realized how important the relationship of child-parent in html. It was not too clear previously since I can adjust things without make things inside another thing. However, this time, it is a huge advantage because everything models have different pivots. If they do not have this, I will need to calculate the positions differently.
 
 ## Next steps
 My next steps will be:
