@@ -1,4 +1,5 @@
 # Building the town. Send your messages.
+Houses will create a town, messages will create a book.
 
 ## Idea
 I want this to be a place people can interact in a more visualized zone rather than a simple 2D UI. My intinital idea was having a 3 dimensional town that people can walk around and send mails to the house they wanted. However, since the implementation is quite difficult, I changed it so that every house represents every users and they can send the messages to everyone in the community. In other words, everyone that visits the website can read the motivational quotes/a wish/ anything from strangers. By this, I want to create a community sense on the internet without people actually talking to each other.
@@ -169,3 +170,142 @@ Finally, the preview is coded by using p5.js. Everytime the users changing color
 ```
 #### Illustration
 <img src="build.PNG">
+
+### The Community Town
+Last but not least, it is the 3 dimensional community town. To build this, I used the A-Frame library. The reason that I want to use A-Frame is that I want to have a more visualized representation of each message. Instead of having a line of words, I want people to feel that their presence are in the town since houses mean long-term. Also, houses will create a town, while messages will create a book. All of this can be seen through this website.
+
+#### Code Snippet
+I initialized by loading all of the houses into the html page as well as loading the enviroment where all the houses will be located on. This also includes the camera that users can move around.
+```
+    <a-scene id="scene_asset">
+        <a-assets>
+            <!-- ... -->
+            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+            <img id="ground" src="img.jpg">
+            <!-- ... -->
+            <img id="skyTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+            <a-asset-item id="slumhouse" src="houses/slumhouse/scene.gltf"></a-asset-item>
+            <a-asset-item id="redhouse" src="houses/redhouse/scene.gltf"></a-asset-item>
+            <a-asset-item id="bluehouse" src="houses/bluehouse1/scene.gltf"></a-asset-item>
+            <a-asset-item id="hauntedhouse" src="houses/hauntedhouse/scene.gltf"></a-asset-item>
+            <a-asset-item id="guesthouse" src="houses/guesthouse/scene.gltf"></a-asset-item>
+            <img id="window" src="images/window.png">
+            <img id="roof" src="images/roof.png">
+            <img id="door" src="images/door.png">
+
+
+        </a-assets>
+    
+        <a-entity environment="preset: forest; dressingAmount: 100" width="10000" height="10000"></a-entity>
+
+        <a-sky color="#ECECEC"></a-sky>
+
+        <a-entity position="0 5 5">
+            <a-camera active="true">
+                <a-entity id="cur" cursor="rayOrigin:mouse"></a-entity>
+            </a-camera>
+            
+        </a-entity>
+    </a-scene>
+```
+All of the house creation is done in javascript. Since I am using the pre-made 3D models from SketchFab, every model has different pivots. Therefore, I have to find the correct positions for the messages and names. Below is an exmaple of how I did it:
+```
+//the same structure apply for every models through the iteration of the database.
+    let item = document.createElement('a-entity');
+    item.id = house.house.type + house.house.name;
+    item.setAttribute('gltf-model', house.house.type);
+    item.setAttribute('position', {x:house.posX * 20 - 80, y:0.5, z:house.posY * 20 - 80});
+    if (house.house.type =="#slumhouse"){
+        item.setAttribute('scale', {x:1.5, y:1.5, z:1.5});
+        text.setAttribute('position', {x:0, y:6, z:0.5});
+        text.setAttribute('height', '20');
+        text.setAttribute('width', '20');
+        msg.setAttribute('height', '20');
+        msg.setAttribute('width', '20');
+        msg.setAttribute('position', {x:0, y:8, z:0.5});
+    }
+```
+For the option of design your house, I made a simple house that include a base, a roof, a door and 6 windows. The base is the parent of all the other elements and therefore, the position of the children elements is relative to the base. This will make the process of controlling the positions a lot more easier.
+```
+if (house.house.type == "#designhouse"){
+    let asset = document.getElementById("scene_asset");
+    let base = document.createElement('a-box');
+    base.id = house.house.type + house.house.name;
+    base.setAttribute('position', {x:house.posX * 20 - 120, y:0.5, z:house.posY * 20 - 100});
+    base.setAttribute('height', 20);
+    base.setAttribute('width', 10);
+    base.setAttribute('depth', 10);
+    base.setAttribute('color', house.house.baseColor);
+    console.log(house);
+
+    let roof = document.createElement('a-cone');
+    roof.setAttribute('position', {x:0, y:15, z:0});
+    roof.setAttribute('radius-bottom', 10);
+    roof.setAttribute('height', 10);
+    roof.setAttribute('color', house.house.roofColor);
+
+    let door = document.createElement('a-box');
+    door.setAttribute('position', {x:0, y:0, z:5});
+    door.setAttribute('width', 3);
+    door.setAttribute('height', 10);
+    door.setAttribute('color', "#FFF");
+    door.setAttribute('src', "#door")
+
+
+    asset.appendChild(base);
+    base.appendChild(roof);
+    base.appendChild(door);
+    base.appendChild(text);
+    base.appendChild(msg);
+
+    let winlst = ["-2 7 4.5","2 7 4.5","4.5 7 -2","4.5 7 2","-4.5 7 -2","-4.5 7 2"];
+    for (let i = 0; i < winlst.length; i++) {
+        let window = document.createElement('a-box');
+        window.setAttribute('position', winlst[i]);
+        window.setAttribute('scale', {x:2, y:2, z:2})
+        window.setAttribute('color', "#FFF");
+        window.setAttribute('src', "#window");
+        base.appendChild(window);
+    }
+```
+Along with the messages, I also made their names to appear on top of the house. However, since I want them to focus on the messages itself, I made the names to appear only when the users hover on the houses.
+```
+    let cursor = document.getElementById("cur");
+    cursor.addEventListener('mouseenter', function (evt) {
+        if (evt.detail.intersectedEl.id != undefined) {
+            let text = document.getElementById(evt.detail.intersectedEl.id + "text");
+            text.setAttribute('opacity', 1);}
+    });
+
+    cursor.addEventListener('mouseleave', function (evt) {
+        if (evt.detail.intersectedEl.id != undefined) {
+            let text = document.getElementById(evt.detail.intersectedEl.id + "text");
+            text.setAttribute('opacity', 0);}
+    });
+```
+In addition to that, to make the user experience easier, I made the rotation animation so that the users can view the house in any angle without having to move around. 
+
+```
+    let rotateObj;
+    let rotateText;
+    let rotateMsg;
+    cursor.addEventListener('click', (evt)=>{
+        if (evt.detail.intersectedEl.id != undefined) {
+            let obj = document.getElementById(evt.detail.intersectedEl.id);
+            rotateObj = obj.getAttribute('rotation').y + 90;
+            // console.log(rotate);
+            obj.setAttribute('animation', "property: rotation; to: 0 " + rotateObj + " 0; dur: 1000");
+            let text = document.getElementById(evt.detail.intersectedEl.id + "text");
+            rotateText = text.getAttribute('rotation').y + 90;
+            text.setAttribute('animation', "property: rotation; to: 0 " + rotateText + " 0; dur: 1000");        
+            
+            let msg = document.getElementById(evt.detail.intersectedEl.id + "msg");
+            rotateMsg = text.getAttribute('rotation').y + 90;
+            msg.setAttribute('animation', "property: rotation; to: 0 " + rotateMsg + " 0; dur: 1000");          
+
+        }
+    })
+```
+
+#### Illustration
+<img src="town.PNG">
