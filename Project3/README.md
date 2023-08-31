@@ -1,8 +1,5 @@
 # Building the town. Send your messages.
 Github respiratory: https://github.com/LinhTran263/TownBuild
-
-Working link: (Preview section is not working. I asked Hasibur to help me hosting it on Heroku so I cannot debug directly.) http://town-build.herokuapp.com/
-
 Houses will create a town, messages will create a book.
 
 ## Idea
