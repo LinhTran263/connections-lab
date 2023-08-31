@@ -1,5 +1,5 @@
 # Dragon Hunt
-Game link: https://peat-grove-fukuiraptor.glitch.me/
+Github link: https://github.com/LinhTran263/connections-lab/tree/main/Project_2
 
 ## Inspiration
 Taking the theme from the game of thrones, our game will surround the characters in the famous movie. In our game, the players will represent the houses and they will compete with each other. The characters will include the Stark house, the Tagaryan house, and the villain White Walkers.
